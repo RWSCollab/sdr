@@ -113,7 +113,7 @@ seafloor features (whether related to cultural resources or national
 security concerns).
 
 |  |  |  |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | **Seafloor variable(s)** | **Type/format** | **Desired resolution** |
 | Multibeam bathymetry | Raster/tiff | 4m\* |
 | Multibeam backscatter | Raster/tiff | 4m\* |
@@ -123,7 +123,7 @@ security concerns).
 | Seabed interpretation – Bedforms | Vector-polygons/Esri shapefile | N/A |
 | Seabed interpretation – CMECS Biotic Subclass | Vector-points/Esri shapefile | N/A |
 
-^\*\*Before uploading, down-sample any bathymetry and backscatter datasets using the [Down-sampling Protocol](https://github.com/RWSCollab/sdr/blob/main/files/Appendix_C_Downsampling_Protocol.pdf).\*^
+^\**Before\ uploading,\ bathymetry\ and\ backscatter\ mosaics\ should\ be\ down-sampled\ to\ the\ recommended\ resolution.\ A\ [Down-sampling\ Protocol](https://github.com/RWSCollab/sdr/blob/main/files/Appendix_C_Downsampling_Protocol.pdf)\ is\ available\ to\ assist\ data\ providers.*^
 
 Files containing confidential and/or sensitive information should not be
 uploaded to the Seafloor Data Repository. In these instances, metadata
@@ -133,11 +133,11 @@ data submission](#steps)).
 
 # Steps for data submission {#steps}
 
-1.  Email emily.shumchenia\@gmail.com to let us know you’re planning to
+1.  Email emily.shumchenia\@rwsc.org to let us know you’re planning to
     submit a data package to the SDR.
 
 2.  You must be signed in to DataONE’s platform to submit data. This can
-    be done by entering your[ORCID](https://orcid.org/). If you don’t
+    be done by entering your [ORCID](https://orcid.org/). If you don’t
     have an ORCID, you can obtain one for free at
     [https://orcid.org](https://orcid.org/).
 
@@ -178,10 +178,11 @@ data submission](#steps)).
     curators have reviewed it. SDR curators are:
 
 - Emily Shumchenia, RWSC Director, NROC Science & Portal Director
-  ([emily.shumchenia\@gmail.com]{.underline})
+  ([[emily.shumchenia\@rwsc.org]{.underline}](mailto:emily.shumchenia@rwsc.org))
 
 - Nikelene Mclean, RWSC Coordinator, Habitat & Ecosystem Subcommittee
-  Coordinator ([mclean.nikelene\@gmail.com]{.underline})
+  Coordinator
+  ([[mclean.nikelene\@gmail.com]{.underline}](mailto:mclean.nikelene@gmail.com))
 
 2.  During the review process, SDR curators may reach out to you with
     questions about the data or to discuss any sensitivities
