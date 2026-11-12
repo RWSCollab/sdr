@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="NROC, MARCO, RWSC">
+<meta name="dcterms.date" content="2026-11-11">
+
+<title>Submitting data to the Seafloor Data Repository (SDR)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href=".//files/t_RWSC_7hex.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d496ad6b422d94a46da911cb84fa8ce6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: #FFFFFF;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: #FFFFFF;
+background: #FAA51A;
+      }
+</style>
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./files/RWSC_Logo_notext.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Submitting data to the Seafloor Data Repository (SDR)</span>
+    </a>
+  </div>
+        <div class="quarto-navbar-tools tools-end">
+</div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Background and purpose</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Submitting data to the Seafloor Data Repository (SDR)</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>NROC, MARCO, RWSC </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">11/11/26</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./files/t_RWSC_HE.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="https://seafloor.dataone.org" title="Seafloor Data Repository website" class="quarto-navigation-tool px-1" aria-label="Seafloor Data Repository website"><i class="bi bi-globe"></i></a>
+    <a href="https://github.com/RWSCollab/sdr" title="github" class="quarto-navigation-tool px-1" aria-label="github"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/RWSCollab/sdr/blob/main/files/SDR_Data_Submission_Info_11.11.26.pdf" title="download pdf" class="quarto-navigation-tool px-1" aria-label="download pdf"><i class="bi bi-cloud-download"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Background and purpose</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html##requiring" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Requiring submission to the Seafloor Data Repository</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#types" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Types of data accepted</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#steps" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Steps for data submission</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html#after" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What to expect after submission</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<section id="intro" class="level1">
+<h1>Background and purpose</h1>
+<p>The <a href="https://www.northeastoceancouncil.org/">Northeast Regional Ocean Council</a> (NROC) and <a href="https://midatlanticocean.org/">Mid-Atlantic Regional Council on the Ocean</a> (MARCO) coordinate with providers and users of seafloor data to understand potential needs and applications.</p>
+<p>NROC and MARCO convene working groups composed of decision makers and seafloor data experts in each region to continually advance the understanding of existing seafloor data, data gaps, data management workflows, and seafloor data products needed for ocean planning and management.</p>
+<p>Federal agencies that collect seafloor data (or fund seafloor data collection) usually make those data available via federal data platforms, including:</p>
+<ul>
+<li><p>The <a href="https://www.ncei.noaa.gov/iho-data-centre-digital-bathymetry">International Hydrographic Organization Data Centre for Digital Bathymetry</a> hosted at NOAA NCEI</p></li>
+<li><p>U.S. Geological Survey Coastal and Marine Hazards and Resources Program <a href="https://cmgds.marine.usgs.gov/idsviewer">Imagery Data System</a> | <a href="https://cmgds.marine.usgs.gov/wh/samples/#home">Samples Repository Collections Inventory</a></p></li>
+<li><p>Seafloor data collection funded by the National Science Foundation (NSF) is stored in the <a href="https://www.marine-geo.org/index.php">Marine Geoscience Data System</a></p></li>
+</ul>
+<p>However, state agencies, other research entities, and partners in the private sector that collect seafloor data (or fund and/or require the collection of seafloor data) expressed a need for a platform to store, access, and transmit seafloor data for use in regional data products and future research. The recommendation for such a platform was also articulated in the <a href="https://rwscollab.github.io/science-plan/seafloor.html#data-management">RWSC Science Plan</a>. NROC and MARCO developed a Seafloor Data Repository where data providers from multiple sectors could make data findable and accessible to meet these needs.</p>
+<p>The purpose of this Seafloor Data Repository (SDR) is to catalog and make available seafloor datasets in U.S. Atlantic waters collected by a variety of entities and purposes that can eventually be used to develop regional-scale seafloor habitat data products (e.g., bathymetry maps, benthic habitat maps, surficial seafloor geology maps) for wider use and dissemination via the Mid-Atlantic Ocean Data Portal and Northeast Ocean Data Portal, and other mapping platforms.</p>
+<p>Anyone may contribute data (or just metadata) to the SDR to provide for discoverability and accessibility of seafloor data in our regions of interest.</p>
+<p><em>Please see the information in the</em> <a href="https://seafloor.dataone.org/support">Support</a> <em>tab for general guidance on publishing data.</em></p>
+</section>
+<section id="requiring" class="level1">
+<h1>Requiring submission to the Seafloor Data Repository</h1>
+<p>State and federal agencies who are funding research or otherwise requiring the collection of seafloor data are encouraged to require submission of seafloor data and data products to the Seafloor Data Repository. Use and/or modify the language below to include a requirement in a research grant/contract agreement or permit condition/stipulation.</p>
+<blockquote class="blockquote">
+<p>Contractor/permittee must submit data and data products (defined below) resulting from the activities described herein to the Seafloor Data Repository (<a href="https://seafloor.dataone.org" class="uri">https://seafloor.dataone.org</a>) within 1 (one) year of collection.</p>
+<p>Contractor/permittee must follow the instructions and specifications in “Submitting Data to the Seafloor Data Repository (SDR)” available at: <a href="https://rwscollab.github.io/sdr/">https://rwscollab.github.io/sdr</a></p>
+<p>Data should be submitted according to the specifications listed in “Submitting Data…” including by uploading the specific file types at the requested resolution. The resolutions requested are intended to obscure confidential business information, proprietary information, or sensitive seafloor features (e.g., cultural or national security). Contractor/permittee must provide agency/funder with a reasonable explanation for submission of data at different resolutions or any omission of data and data products due to concern about confidentiality or sensitivity.</p>
+</blockquote>
+</section>
+<section id="types" class="level1">
+<h1>Types of data accepted</h1>
+<p>The SDR stores data collected by any entity (federal, state, private company, research institution). Through funding from the Massachusetts Clean Energy Center, Rhode Island Department of Environmental Management, and U.S. Bureau of Ocean Energy Management, the following variables, formats, and resolutions were collaboratively identified by an NROC expert working group (<a href="https://github.com/RWSCollab/sdr/blob/main/files/RegionalHabitatMapping_REPORT_Final_w_Appendices.pdf">INSPIRE and NROC 2023</a>). These recommended variables, formats, and resolutions were selected and designed specifically to obscure potentially sensitive or confidential seafloor features (whether related to cultural resources or national security concerns).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Seafloor variable(s)</strong></td>
+<td><strong>Type/format</strong></td>
+<td><strong>Desired resolution</strong></td>
+</tr>
+<tr class="even">
+<td>Multibeam bathymetry</td>
+<td>Raster/tiff</td>
+<td>4m*</td>
+</tr>
+<tr class="odd">
+<td>Multibeam backscatter</td>
+<td>Raster/tiff</td>
+<td>4m*</td>
+</tr>
+<tr class="even">
+<td>Boulder fields and/or picks (identification of boulder locations)</td>
+<td>Vector-points/polygons Esri shapefile</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>Seabed interpretation – CMECS Substrate Group, Subgroup</td>
+<td>Vector-points/polygons/Esri shapefile</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>Seabed interpretation – Shell substrate</td>
+<td>Vector-points/polygons/Esri shapefile</td>
+<td>N/A</td>
+</tr>
+<tr class="odd">
+<td>Seabed interpretation – Bedforms</td>
+<td>Vector-polygons/Esri shapefile</td>
+<td>N/A</td>
+</tr>
+<tr class="even">
+<td>Seabed interpretation – CMECS Biotic Subclass</td>
+<td>Vector-points/Esri shapefile</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p><sup>**Before&nbsp;uploading,&nbsp;down-sample&nbsp;any&nbsp;bathymetry&nbsp;and&nbsp;backscatter&nbsp;datasets&nbsp;using&nbsp;the&nbsp;<a href="https://github.com/RWSCollab/sdr/blob/main/files/Appendix_C_Downsampling_Protocol.pdf">Down-sampling&nbsp;Protocol</a>.*</sup></p>
+<p>Files containing confidential and/or sensitive information should not be uploaded to the Seafloor Data Repository. In these instances, metadata can be submitted to the Seafloor Data Repository, and the dataset entry can be labeled with the appropriate Data Sensitivity tag (see <a href="#steps">Steps for data submission</a>).</p>
+</section>
+<section id="steps" class="level1">
+<h1>Steps for data submission</h1>
+<ol type="1">
+<li><p>Email emily.shumchenia@gmail.com to let us know you’re planning to submit a data package to the SDR.</p></li>
+<li><p>You must be signed in to DataONE’s platform to submit data. This can be done by entering your<a href="https://orcid.org/">ORCID</a>. If you don’t have an ORCID, you can obtain one for free at <a href="https://orcid.org/">https://orcid.org</a>.</p></li>
+<li><p>From the home page at <a href="https://seafloor.dataone.org/" class="uri">https://seafloor.dataone.org/</a>, select “Submit Data” from the header menu.</p></li>
+<li><p>The Submit Data page contains two sections. The top section is a tool to upload files. The bottom section is a data submission form.</p></li>
+<li><p>Check that your metadata meets or exceeds the <a href="https://rwscollab.github.io/repositories-data-catalog/essential-metadata-guide.html">RWSC Essential Metadata</a> guidelines. You will use this information to fill out the data submission form. The Seafloor Data Repository will automatically generate an EML (Ecological Metadata Language) metadata file using the information you submit. The metadata file will be available as part of your data record. <em>Note: EML is the metadata standard used by several RWSC/NROC/MARCO recommended repositories including OBIS and GBIF.</em></p></li>
+<li><p>Fill out all pages/subsections of the <a href="https://seafloor.dataone.org/submit">data submission form</a> completely and accurately. Pay special attention to listing your research funder(s) with their identifiers (e.g.&nbsp;<a href="https://ror.org/">ROR</a>) (use the <em>organization</em> and <em>userId</em> fields).</p></li>
+<li><p>Based on the Data Sensitivity level that you assign to the data, upload data files using the tool at the top of the Submit Data page. If you select “Some or all data is sensitive with significant risk”, <strong>do not upload files</strong> but continue to complete the metadata submission.</p></li>
+<li><p>Hit the “Save dataset” button at the bottom of the page to send your data submission to the SDR curators for review and publication.</p></li>
+</ol>
+</section>
+<section id="after" class="level1">
+<h1>What to expect after submission</h1>
+<ol type="1">
+<li>Your data remains private and will not appear in the SDR until SDR curators have reviewed it. SDR curators are:</li>
+</ol>
+<ul>
+<li><p>Emily Shumchenia, RWSC Director, NROC Science &amp; Portal Director (<u>emily.shumchenia@gmail.com</u>)</p></li>
+<li><p>Nikelene Mclean, RWSC Coordinator, Habitat &amp; Ecosystem Subcommittee Coordinator (<u>mclean.nikelene@gmail.com</u>)</p></li>
+</ul>
+<ol start="2" type="1">
+<li><p>During the review process, SDR curators may reach out to you with questions about the data or to discuss any sensitivities</p></li>
+<li><p>Upon publication, curators will provide you with a DOI linked to the page specific to your dataset in the SDR. We encourage you to use the DOI to add the dataset to publication records, CVs, and websites, and to cite the data wherever they are mentioned to increase data discovery and reuse.</p></li>
+<li><p>Once the data is published, it will appear in the SDR on the “Search Data” page. If you uploaded data, anyone can download it and the associated metadata. DataONE will track how many times a dataset has been downloaded, cited, and viewed. These metrics will be shown on your dataset’s SDR page.</p></li>
+</ol>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/rwscollab\.github\.io\/sdr\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© CC-By-NC-ND NROC, MARCO, RWSC, 2026</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><img src="./files/RWSC_logo_text.png" width="125"></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

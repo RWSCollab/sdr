@@ -1,0 +1,84 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "Submitting data to the Seafloor Data Repository (SDR)"
+  site-url: "https://rwscollab.github.io/sdr/"
+  repo-url: https://github.com/RWSCollab/sdr
+  back-to-top-navigation: true
+  favicon: "/files/t_RWSC_7hex.png"
+  
+  navbar:
+    search: true
+    background: light
+    logo: "/files/RWSC_Logo_notext.png"
+    
+  page-footer:
+    left: "&copy; CC-By-NC-ND NROC, MARCO, RWSC, 2026"
+    right: <img src="/files/RWSC_logo_text.png" width="125">
+    
+  search:
+    location: sidebar
+    type: textbox
+
+  sidebar:
+    title: Submitting data to the SDR
+    logo: "/files/t_RWSC_HE.png"
+    pinned: true
+    align: "center"
+    tools:
+      - icon: globe
+        href: https://seafloor.dataone.org
+        text: "Seafloor Data Repository website"
+      - icon: github
+        href: https://github.com/RWSCollab/sdr
+        text: "github"
+      - icon: cloud-download
+        href: https://github.com/RWSCollab/sdr/blob/main/files/SDR_Data_Submission_Info_11.11.26.pdf
+        text: "download pdf"
+  
+    style: "floating"
+    search: true
+    collapse-level: 1
+       
+    contents:
+      - href: index.qmd
+        text: Background and purpose
+      
+      - text: "---"
+        
+      - href: index.qmd##requiring
+        text: Requiring submission to the Seafloor Data Repository
+            
+      - text: "---"   
+            
+      - href: index.qmd#types
+        text: Types of data accepted
+            
+      - text: "---"
+      
+      - href: index.qmd#steps
+        text: Steps for data submission
+         
+      - text: "---"      
+      
+      - href: index.qmd#after
+        text: What to expect after submission
+
+format:
+  html:
+    theme:
+      - cosmo
+      - rwsc.scss
+    code-copy: true
+    code-overflow: wrap
+    toc: false
+    callout-appearance: simple
+    link-external-newwindow: true
+
+filters:
+  - include-files.lua
+  - quarto
+
+
