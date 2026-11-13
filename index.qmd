@@ -115,15 +115,15 @@ security concerns).
 |  |  |  |
 |------------------------|------------------------|------------------------|
 | **Seafloor variable(s)** | **Type/format** | **Desired resolution** |
-| Multibeam bathymetry | Raster/tiff | 4m\* |
-| Multibeam backscatter | Raster/tiff | 4m\* |
+| Multibeam bathymetry | Raster/tiff | 8m\* |
+| Multibeam backscatter | Raster/tiff | 8m\* |
 | Boulder fields and/or picks (identification of boulder locations) | Vector-points/polygons Esri shapefile | N/A |
 | Seabed interpretation – CMECS Substrate Group, Subgroup | Vector-points/polygons/Esri shapefile | N/A |
 | Seabed interpretation – Shell substrate | Vector-points/polygons/Esri shapefile | N/A |
 | Seabed interpretation – Bedforms | Vector-polygons/Esri shapefile | N/A |
 | Seabed interpretation – CMECS Biotic Subclass | Vector-points/Esri shapefile | N/A |
 
-^\**Before\ uploading,\ bathymetry\ and\ backscatter\ mosaics\ should\ be\ down-sampled\ to\ the\ recommended\ resolution.\ A\ [Down-sampling\ Protocol](https://github.com/RWSCollab/sdr/blob/main/files/Appendix_C_Downsampling_Protocol.pdf)\ is\ available\ to\ assist\ data\ providers.*^
+^\*\*Before uploading, bathymetry and backscatter mosaics should be down-sampled to the recommended resolution. A [Down-sampling Protocol](https://github.com/RWSCollab/sdr/blob/main/files/Appendix_C_Downsampling_Protocol.pdf) is available to assist data providers.\*^
 
 Files containing confidential and/or sensitive information should not be
 uploaded to the Seafloor Data Repository. In these instances, metadata
